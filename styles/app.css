@@ -6,7 +6,12 @@ body {
 
 .labelvalue {
   display: grid;
-  grid-template-rows: 20px 1fr;
+  grid-template-rows: auto 1fr;
+}
+@media (min-width: 992px) {
+  .labelvalue {
+    grid-template-rows: 20px 1fr;
+  }
 }
 .labelvalue > span:last-of-type {
   display: flex;
