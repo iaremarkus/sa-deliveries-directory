@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import admin from "firebase-admin";
-import { applicationDefault, initializeApp as initializeAdminApp } from "firebase-admin/app";
+import { initializeApp as initializeAdminApp } from "firebase-admin/app";
 import { initializeApp } from "firebase/app";
 
 require("dotenv").config();
@@ -23,7 +23,8 @@ if (!admin.apps.length) {
       type: process.env.TYPE,
       project_id: process.env.PROJECT_ID,
       private_key_id: process.env.PRIVATE_KEY_ID,
-      private_key: process.env.PRIVATE_KEY,
+      // private_key: process.env.PRIVATE_KEY,
+      ...JSON.parse(process.env.PRIVATE_KEY),
       client_email: process.env.CLIENT_EMAIL,
       client_id: process.env.CLIENT_ID,
       auth_uri: process.env.AUTH_URI,
