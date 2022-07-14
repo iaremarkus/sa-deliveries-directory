@@ -1,0 +1,19 @@
+.normal-field {
+  flex-direction: column-reverse !important;
+}
+
+.checkbox label {
+  @apply relative flex items-center gap-3 cursor-pointer text-lg;
+  top: -1px;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox label::before {
+  content: " ";
+
+  @apply block w-6 h-6 bg-white border border-slate-600 rounded-md;
+}
+.checkbox input:checked + label::before {
+  @apply bg-slate-600;
+}

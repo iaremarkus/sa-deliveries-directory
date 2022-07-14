@@ -1,0 +1,31 @@
+@import "./formglobals.css";
+
+body {
+  @apply bg-slate-200;
+}
+
+.labelvalue {
+  display: grid;
+  grid-template-rows: 20px 1fr;
+}
+.labelvalue > span:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#nprogress .bar {
+  height: 5px !important;
+}
+
+.page-outlet {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.page-outlet.loading {
+  opacity: 0.5;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

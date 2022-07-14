@@ -1,0 +1,35 @@
+{
+  "useTabs": false,
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "semi": true,
+  "jsxBracketSameLine": false,
+  "printWidth": 120,
+  "arrowParens": "avoid",
+  "trailingComma": "none",
+
+  "importOrder": [
+    "^type(.*)$",
+
+    "<THIRD_PARTY_MODULES>",
+
+    "^contexts(.*)$",
+    "^hooks(.*)$",
+    "^utils(.*)$",
+    "^constants(.*)$",
+    "^formblocks(.*)$",
+    "^components(.*)$",
+    "^atoms(.*)$",
+    "^molecules(.*)$",
+    "^organisms(.*)$",
+
+    "^models(.*)$",
+
+    "^icons/(.*)$",
+
+    "^[./]"
+  ],
+
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
