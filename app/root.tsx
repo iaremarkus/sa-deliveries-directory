@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useFetchers, useTransition } from "@remix-run/react";
+import { Form, useFetchers, useTransition } from "@remix-run/react";
 import { Link, Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from "@remix-run/react";
 import NProgress from "nprogress";
 import nProgressStyles from "nprogress/nprogress.css";
@@ -92,6 +92,10 @@ export default function App() {
 
         <div ref={pageOutlet} className="page-outlet">
           <Outlet />
+
+          <Form action="/auth/google" method="post">
+            <button className="absolute bottom-0 right-0 p-2">...</button>
+          </Form>
         </div>
         <ScrollRestoration />
         <Scripts />
